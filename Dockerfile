@@ -2,9 +2,9 @@ FROM quay.io/che-incubator/che-code:insiders
 
 USER root
 
-RUN ls -la /checode-linux-libc/extensions
+RUN mkdir /checode-extensions
 
-RUN /checode-linux-libc/bin/che-code \
+RUN /checode-linux-libc/bin/che-code --extensions-dir /checode-extensions \
       --install-extension ms-python.python \
       --install-extension vscode.npm \
       --install-extension redhat.vscode-yaml \
@@ -31,6 +31,6 @@ RUN /checode-linux-libc/bin/che-code \
       --install-extension redhat.vscode-tekton-pipelines \
       --install-extension redhat.vscode-xml
 
-RUN ls -la /checode-linux-libc/extensions
+RUN mkdir -p /checode/remote && mv /checode-extensions /checode/remote/extensions
 
 USER 1001
