@@ -31,6 +31,6 @@ RUN /checode-linux-libc/bin/che-code --extensions-dir /checode-extensions \
       --install-extension redhat.vscode-tekton-pipelines \
       --install-extension redhat.vscode-xml
 
-RUN mkdir -p /checode/remote && mv /checode-extensions /checode/remote/extensions
+COPY entrypoint-init-container.sh /
 
 USER 1001
