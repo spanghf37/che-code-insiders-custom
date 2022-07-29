@@ -35,4 +35,10 @@ COPY entrypoint-init-container.sh /
 
 RUN chmod +x /entrypoint-init-container.sh
 
+RUN sed -i 's/https:\/\/open-vsx.org\/vscode\/gallery//g' checode-linux-libc/product.json && \
+    sed -i 's/https:\/\/open-vsx.org\/vscode\/item//g' checode-linux-libc/product.json
+
+RUN sed -i 's/https:\/\/open-vsx.org\/vscode\/gallery//g' checode-linux-musl/product.json && \
+    sed -i 's/https:\/\/open-vsx.org\/vscode\/item//g' checode-linux-musl/product.json
+    
 USER 1001
