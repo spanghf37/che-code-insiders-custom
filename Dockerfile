@@ -1,4 +1,4 @@
-FROM quay.io/che-incubator/che-code-dev:insiders
+FROM quay.io/che-incubator/che-code:insiders
 
 USER root
 
