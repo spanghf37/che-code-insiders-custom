@@ -33,4 +33,6 @@ RUN /checode-linux-libc/bin/che-code --extensions-dir /checode-extensions \
 
 COPY entrypoint-init-container.sh /
 
+RUN chmod +x /entrypoint-init-container.sh
+
 USER 1001
