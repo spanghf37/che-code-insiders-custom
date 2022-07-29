@@ -2,7 +2,8 @@ FROM quay.io/che-incubator/che-code-dev:insiders
 
 USER root
 
-RUN ls -la /checode-linux-libc/extensions
+RUN ls -la
+#RUN ls -la /checode-linux-libc/extensions
 
 RUN /checode-linux-libc/bin/che-code \
       --install-extension ms-python.python \
