@@ -2,9 +2,9 @@ FROM quay.io/che-incubator/che-code-dev:insiders
 
 USER root
 
-RUN cd / && find -iname code
+RUN ls -la /checode-linux-libc/extensions
 
-RUN code \
+RUN /checode-linux-libc/bin/che-code \
       --install-extension ms-python.python \
       --install-extension vscode.npm \
       --install-extension redhat.vscode-yaml \
@@ -30,5 +30,7 @@ RUN code \
       --install-extension redhat.vscode-openshift-connector \
       --install-extension redhat.vscode-tekton-pipelines \
       --install-extension redhat.vscode-xml
+
+RUN ls -la /checode-linux-libc/extensions
 
 USER 1001
