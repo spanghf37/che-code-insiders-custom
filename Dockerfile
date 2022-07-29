@@ -1,5 +1,9 @@
 FROM quay.io/che-incubator/che-code-dev:insiders
 
+USER root
+
+RUN cd / && find -iname code
+
 RUN code \
       --install-extension ms-python.python \
       --install-extension vscode.npm \
@@ -26,3 +30,5 @@ RUN code \
       --install-extension redhat.vscode-openshift-connector \
       --install-extension redhat.vscode-tekton-pipelines \
       --install-extension redhat.vscode-xml
+
+USER 1001
