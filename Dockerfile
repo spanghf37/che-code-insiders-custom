@@ -8,7 +8,7 @@ RUN code \
       --install-extension ms-python.python \
       --install-extension vscode.npm \
       --install-extension redhat.vscode-yaml \
-      --install-extension esbenp.prettier-vscode \      
+      --install-extension esbenp.prettier-vscode \
       --install-extension dbaeumer.vscode-eslint \
       --install-extension ms-toolsai.jupyter \
       --install-extension ms-toolsai.jupyter-keymap \
@@ -23,9 +23,9 @@ RUN code \
       --install-extension dsznajder.es7-react-js-snippets \
       --install-extension GitLab.gitlab-workflow \
       --install-extension rust-lang.rust \
-      --install-extension ms-kubernetes-tools.vscode-kubernetes-tools \      
+      --install-extension ms-kubernetes-tools.vscode-kubernetes-tools \
       --install-extension batisteo.vscode-django \
-      --install-extension emmanuelbeziat.vscode-great-icons \      
+      --install-extension emmanuelbeziat.vscode-great-icons \
       --install-extension humao.rest-client \
       --install-extension redhat.vscode-openshift-connector \
       --install-extension redhat.vscode-tekton-pipelines \
